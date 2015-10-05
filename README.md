@@ -24,3 +24,5 @@ u::::::::::::::u  n::::n    n::::n  o:::::ooooo:::::o
 ### Unocss ###
 
 Allows to add CSS in the site directly from the Dashboard.
+
+[CMSUno](https://github.com/boiteasite/cmsuno)
