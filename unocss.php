@@ -14,17 +14,17 @@ if (isset($_POST['action']))
 		// ********************************************************************************************
 		case 'plugin': ?>
 		<div class="blocForm">
-			<h2><?php echo _("Uno CSS");?></h2>
-			<p><?php echo _("This plugin allows you to add custom CSS to the website without having to modify the template.");?></p>
-			<p><?php echo _("The code will be installed at the top of the page, in the /head/.");?></p>
+			<h2><?php echo T_("Uno CSS");?></h2>
+			<p><?php echo T_("This plugin allows you to add custom CSS to the website without having to modify the template.");?></p>
+			<p><?php echo T_("The code will be installed at the top of the page, in the /head/.");?></p>
 			<table class="hForm">
 				<tr>
-					<td><label><?php echo _("CSS Styles");?></label></td>
+					<td><label><?php echo T_("CSS Styles");?></label></td>
 					<td><textarea name="inputCSS" id="inputCSS" style="width:100%;"></textarea></td>
-					<td><em><?php echo _("Write CSS");?>&nbsp;<span style='text-decoration:underline;'><?php echo _("without");?></span>&nbsp;<?php echo _("the two opening and closing styles tags.");?></em></td>
+					<td><em><?php echo T_("Write CSS");?>&nbsp;<span style='text-decoration:underline;'><?php echo T_("without");?></span>&nbsp;<?php echo T_("the two opening and closing styles tags.");?></em></td>
 				</tr>
 			</table>
-			<div class="bouton fr" onClick="f_cssuno();" title="<?php echo _("Save settings");?>"><?php echo _("Save");?></div>
+			<div class="bouton fr" onClick="f_cssuno();" title="<?php echo T_("Save settings");?>"><?php echo T_("Save");?></div>
 			<div class="clear"></div>
 		</div>
 		<?php break;
@@ -34,8 +34,8 @@ if (isset($_POST['action']))
 		$a = array();
 		$a['tex']=$_POST['css'];
 		$out = json_encode($a);
-		if (file_put_contents('../../data/'.$Ubusy.'/unocss.json', $out)) echo _('Backup performed');
-		else echo '!'._('Impossible backup');
+		if (file_put_contents('../../data/'.$Ubusy.'/unocss.json', $out)) echo T_('Backup performed');
+		else echo '!'.T_('Impossible backup');
 		break;
 		// ********************************************************************************************
 		}
