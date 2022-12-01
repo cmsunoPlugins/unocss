@@ -5,6 +5,6 @@ if (!isset($_SESSION['cmsuno'])) exit();
 if(file_exists('data/'.$Ubusy.'/unocss.json')) {
 	$q1 = file_get_contents('data/'.$Ubusy.'/unocss.json');
 	$a1 = json_decode($q1,true);
-	$Ustyle .= $a1['tex']."\r\n";
+	if(!empty($a1['tex'])) $Ustyle .= $a1['tex']."\r\n";
 }
 ?>

@@ -6,7 +6,7 @@ if(!isset($_POST['unox']) || $_POST['unox']!=$_SESSION['unox']) {sleep(2);exit;}
 include('../../config.php');
 include('lang/lang.php');
 $busy = (isset($_POST['ubusy'])?preg_replace("/[^A-Za-z0-9-_]/",'',$_POST['ubusy']):'index');
-if(!file_exists('../../data/'.$busy.'/unocss.json')) file_put_contents('../../data/'.$busy.'/unocss.json', '');
+if(!file_exists('../../data/'.$busy.'/unocss.json')) file_put_contents('../../data/'.$busy.'/unocss.json', '{}');
 // ********************* actions *************************************************************************
 if (isset($_POST['action'])) {
 	switch ($_POST['action']) {

@@ -16,8 +16,7 @@ function f_load_cssuno(){
 	fetch("uno/data/"+Ubusy+"/unocss.json?r="+Math.random())
 	.then(r=>r.json())
 	.then(function(data){
-		let x = data.tex.replace(/\\/g,'');
-		document.getElementById('inputCSS').value=x;
+		if(data.tex)document.getElementById('inputCSS').value=data.tex.replace(/\\/g,'');
 	});
 }
 //
