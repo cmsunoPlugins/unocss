@@ -6,6 +6,7 @@ function f_cssuno(){
 	let x=new FormData();
 	x.set('action','save');
 	x.set('unox',Unox);
+	x.set('ubusy',Ubusy);
 	x.set('css',document.getElementById('inputCSS').value);
 	fetch('uno/plugins/unocss/unocss.php',{method:'post',body:x})
 	.then(r=>r.text())
